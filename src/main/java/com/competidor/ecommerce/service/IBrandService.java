@@ -1,4 +1,4 @@
-package com.competidor.ecommerce.repository;
+package com.competidor.ecommerce.service;
 
 
 import com.competidor.ecommerce.entity.Brand;
