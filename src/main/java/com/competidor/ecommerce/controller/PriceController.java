@@ -39,10 +39,8 @@ public class PriceController {
 
   @GetMapping("/product/{id}")
   @ResponseBody
-  public ResponseEntity<Price> getPriceByProductId(@PathVariable("id") int id) throws Exception{
-    return priceService.getPriceByProductId(id)
-      .map(price -> new ResponseEntity<>(price, HttpStatus.OK))
-      .orElse(new ResponseEntity<>(HttpStatus.NOT_FOUND));
+  public List<Price> getPriceByProductId(@PathVariable("id") int id) throws Exception{
+    return priceService.getPriceByProductId(id);
   }
 
 }
