@@ -9,5 +9,5 @@ import java.util.Optional;
 public interface IPriceService {
   public List<Price> getPrices();
   public Optional<Price> getPriceById(int id);
-  public Optional<Price> getPriceByProductId(int id);
+  public List<Price> getPriceByProductId(int id);
 }

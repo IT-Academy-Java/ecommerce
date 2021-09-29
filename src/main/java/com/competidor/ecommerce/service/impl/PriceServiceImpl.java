@@ -28,8 +28,8 @@ public class PriceServiceImpl implements IPriceService {
   }
 
   @Override
-  public Optional<Price> getPriceByProductId(int id) {
-    return iPriceRepository.findPriceByProduct(id);
+  public List<Price> getPriceByProductId(int id) {
+    return iPriceRepository.findPricesByProduct(id);
   }
 
 
