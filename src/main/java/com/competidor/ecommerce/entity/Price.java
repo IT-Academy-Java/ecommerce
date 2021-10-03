@@ -1,113 +1,38 @@
 package com.competidor.ecommerce.entity;
 
+import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
 
 
+@Data
 @Entity
 @Table(name="price")
 public class Price {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  @Column(name="id_price")
-  private Integer id_price;
+  @Column(name="id")
+  private Integer idPrice;
 
-  private Date start_date;
-  private Date end_date;
-  private int price_list;
-  private int product;
+  @Column(name="start_date")
+  private Date startDate;
+
+  @Column(name="end_date")
+  private Date endDate;
+
+  @Column(name="price_list")
+  private int priceList;
+
+  @Column(name="product_id")
+  private int productId;
+
   private int priority;
   private double price;
   private String curr;
 
-  private Integer brand;
+  @Column(name="brand_id")
+  private Integer brandId;
 
-  public Price() {
-  }
-
-  public Price(Integer id_price, Date start_date, Date end_date, int price_list, int product, int priority, double price, String curr, Integer brand) {
-    this.id_price = id_price;
-    this.start_date = start_date;
-    this.end_date = end_date;
-    this.price_list = price_list;
-    this.product = product;
-    this.priority = priority;
-    this.price = price;
-    this.curr = curr;
-    this.brand = brand;
-  }
-
-  public Integer getId_price() {
-    return id_price;
-  }
-
-  public void setId_price(Integer id_price) {
-    this.id_price = id_price;
-  }
-
-  public Date getStart_date() {
-    return start_date;
-  }
-
-  public void setStart_date(Date start_date) {
-    this.start_date = start_date;
-  }
-
-  public Date getEnd_date() {
-    return end_date;
-  }
-
-  public void setEnd_date(Date end_date) {
-    this.end_date = end_date;
-  }
-
-  public int getPrice_list() {
-    return price_list;
-  }
-
-  public void setPrice_list(int price_list) {
-    this.price_list = price_list;
-  }
-
-  public int getProduct() {
-    return product;
-  }
-
-  public void setProduct(int product) {
-    this.product = product;
-  }
-
-  public int getPriority() {
-    return priority;
-  }
-
-  public void setPriority(int priority) {
-    this.priority = priority;
-  }
-
-  public double getPrice() {
-    return price;
-  }
-
-  public void setPrice(double price) {
-    this.price = price;
-  }
-
-  public String getCurr() {
-    return curr;
-  }
-
-  public void setCurr(String curr) {
-    this.curr = curr;
-  }
-
-  public Integer getBrand() {
-    return brand;
-  }
-
-  public void setBrand(Integer brand) {
-    this.brand = brand;
-  }
 }
