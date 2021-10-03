@@ -1,7 +1,9 @@
 package com.competidor.ecommerce.controller;
 
 import com.competidor.ecommerce.entity.Price;
+import com.competidor.ecommerce.service.IPriceService;
 import com.competidor.ecommerce.service.impl.PriceServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
@@ -14,14 +16,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/price")
+@Slf4j
 public class PriceController {
 
   @Autowired
-  private PriceServiceImpl priceService;
+  private IPriceService priceService;
 
   @GetMapping("/greeting")
   @ResponseBody
   public String greeting() throws Exception{
+    log.info("from greeting rest controller:  hello darling!!!");
     return "Hello darling!";
   }
 
