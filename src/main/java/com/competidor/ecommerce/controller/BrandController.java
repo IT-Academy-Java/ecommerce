@@ -2,6 +2,7 @@ package com.competidor.ecommerce.controller;
 
 import com.competidor.ecommerce.entity.Brand;
 import com.competidor.ecommerce.service.IBrandService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/brand")
+@Slf4j
 public class BrandController {
 
   @Autowired
