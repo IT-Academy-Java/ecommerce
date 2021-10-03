@@ -22,21 +22,21 @@ public class Price {
   private double price;
   private String curr;
 
-  private Integer brand_id;
+  private Integer brand;
 
   public Price() {
   }
 
-  public Price(Integer id_price, Date start_date, Date end_date, int price_list, int product_id, int priority, double price, String curr, Integer brand_id) {
+  public Price(Integer id_price, Date start_date, Date end_date, int price_list, int product, int priority, double price, String curr, Integer brand) {
     this.id_price = id_price;
     this.start_date = start_date;
     this.end_date = end_date;
     this.price_list = price_list;
-    this.product = product_id;
+    this.product = product;
     this.priority = priority;
     this.price = price;
     this.curr = curr;
-    this.brand_id = brand_id;
+    this.brand = brand;
   }
 
   public Integer getId_price() {
@@ -75,8 +75,8 @@ public class Price {
     return product;
   }
 
-  public void setProduct(int product_id) {
-    this.product = product_id;
+  public void setProduct(int product) {
+    this.product = product;
   }
 
   public int getPriority() {
@@ -103,11 +103,11 @@ public class Price {
     this.curr = curr;
   }
 
-  public Integer getBrand_id() {
-    return brand_id;
+  public Integer getBrand() {
+    return brand;
   }
 
-  public void setBrand_id(Integer brand_id) {
-    this.brand_id = brand_id;
+  public void setBrand(Integer brand) {
+    this.brand = brand;
   }
 }
