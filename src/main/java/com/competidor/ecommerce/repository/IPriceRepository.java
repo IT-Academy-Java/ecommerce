@@ -11,7 +11,7 @@ import java.util.Optional;
 @Repository
 public interface IPriceRepository extends JpaRepository<Price, Integer> {
 
-  Optional<Price> findPriceByProduct(int id);
   List<Price> findPricesByProduct(int id);
+  Optional<Price> findFirstByProductAndBrandOrderByPriorityDesc(int productId, int brandId);
 
 }
